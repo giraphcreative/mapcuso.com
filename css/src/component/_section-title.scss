@@ -1,0 +1,52 @@
+
+
+.section-title {
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include respond-to( $bp-m ) {
+        padding: 20px $margin;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    &.blue {
+        background: $blue;
+        color: white;
+
+        span {
+            color: $orange;
+        }
+    }
+
+    &.purple {
+        background: $purple;
+        color: white;
+
+        span {
+            color: $orange;
+        }
+    }
+
+    &.orange {
+        background: $orange;
+        color: $blue;
+
+        span {
+            color: white;
+        }
+    }
+
+    &.sky {
+        background: $sky;
+        color: $blue;
+
+        span {
+            color: white;
+        }
+    }
+}
+

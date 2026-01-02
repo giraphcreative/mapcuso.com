@@ -1,0 +1,71 @@
+
+
+.testimonials {
+    @include padding;
+
+    @include respond-to( $bp-s ) {
+        background: url(../img/bg-circle-purple.png) right center no-repeat;
+        background-size: cover;
+    }
+
+    .quote {
+        display: none;
+
+        &.visible {
+            display: block;
+        }
+
+        @include respond-to( $bp-s ) {
+            flex-direction: row-reverse;
+            align-items: center;
+
+            &.visible {
+                display: flex;
+            }
+        }
+
+        .quote-image {
+            @include respond-to( $bp-s ) {
+                flex: 1 1 40%;
+            }
+
+            @include respond-to( $bp-m ) {
+                flex: 1 1 30%;
+            }
+
+            @include respond-to( $bp-l ) {
+                flex: 1 1 20%;
+            }
+
+            img {
+                display: block;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+
+        .quote-content {
+            @include respond-to( $bp-s ) {
+                flex: 1 1 55%;
+                margin-right: 5%;
+            }
+
+            @include respond-to( $bp-m ) {
+                flex: 1 1 65%;
+            }
+
+            @include respond-to( $bp-l ) {
+                flex: 1 1 75%;
+            }
+
+            .attribution {
+                p {
+                    padding: 5px 0;
+                    color: $purple;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+

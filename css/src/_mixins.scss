@@ -1,0 +1,76 @@
+
+
+// responsive mixin
+@mixin respond-to( $breakpoint ) {
+    @media only screen and ( min-width: $breakpoint ) { @content; }
+}
+
+
+// Clearfix mixin
+@mixin clearfix {
+	zoom: 1;
+
+	&:before, &:after { 
+		content: ""; 
+		display: table;
+	}
+
+	&, &:before, &:after { clear: both; }
+}
+
+
+@mixin wrap( $max-width ) {
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
+
+@mixin wrap-main {
+	@include wrap( $bp-xl );
+}
+
+
+$margin: 7%;
+
+@mixin padding {
+	padding: 30px;
+	@include respond-to( $bp-m ) { padding: 30px $margin; }
+	@include respond-to( $bp-l ) { padding: 40px $margin; }
+	@include respond-to( $bp-xl ) { padding: 50px $margin; }
+}
+
+@mixin padding-tall {
+	padding: 20px;
+	@include respond-to( $bp-m ) { padding: 40px 30px; }
+	@include respond-to( $bp-l ) { padding: 50px $margin; }
+	@include respond-to( $bp-xl ) { padding: 60px $margin; }
+	@include respond-to( $bp-xxl ) { padding: 70px $margin; }
+	@include respond-to( $bp-xxxl ) { padding: 80px $margin; }
+}
+
+@mixin padding-no-bottom {
+	padding: 20px;
+	@include respond-to( $bp-m ) { padding: 40px 30px 0 30px; }
+	@include respond-to( $bp-l ) { padding: 50px $margin 0 $margin; }
+	@include respond-to( $bp-xl ) { padding: 60px $margin 0 $margin; }
+	@include respond-to( $bp-xxl ) { padding: 70px $margin 0 $margin; }
+	@include respond-to( $bp-xxxl ) { padding: 80px $margin 0 $margin; }
+}
+
+@mixin padding-no-top {
+	padding: 20px;
+	@include respond-to( $bp-m ) { padding: 0 30px 40px 30px; }
+	@include respond-to( $bp-l ) { padding: 0 $margin 50px $margin; }
+	@include respond-to( $bp-xl ) { padding: 0 $margin 60px $margin; }
+	@include respond-to( $bp-xxl ) { padding: 0 $margin 70px $margin; }
+	@include respond-to( $bp-xxxl ) { padding: 0 $margin 80px $margin; }
+}
+
+@mixin padding-side( $top: 20px, $bottom: 20px ) {
+	padding: 20px;
+	@include respond-to( $bp-m ) { padding: $top 30px $bottom; }
+	@include respond-to( $bp-l ) { padding: $top $margin $bottom; }
+	@include respond-to( $bp-xl ) { padding: $top $margin $bottom; }
+	@include respond-to( $bp-xxl ) { padding: $top $margin $bottom; }
+	@include respond-to( $bp-xxxl ) { padding: $top $margin $bottom; }
+}

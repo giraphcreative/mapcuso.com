@@ -1,0 +1,39 @@
+
+.image-boxes-container {
+    @include padding;
+    background: url(../img/bg-boxes-grey.jpg) center center no-repeat;
+    background-size: cover;
+
+    .image-boxes {
+        @include respond-to( $bp-s ) {
+            margin-right: -5%;
+            display: flex;
+        }
+
+        @include respond-to( $bp-l ) {
+            margin-right: -8%;
+        }
+
+        .image-box {
+            text-align: center;
+
+            img {
+                max-width: 300px;
+            }
+
+            @include respond-to( $bp-s ) {
+                flex: 0 0 45%;
+                margin-right: 5%;
+            }
+            
+            @include respond-to( $bp-m ) {
+                flex: 0 0 28.3333%;
+            }
+            
+            @include respond-to( $bp-l ) {
+                flex: 0 0 25.3333%;
+                margin-right: 8%;
+            }
+        }
+    }
+}

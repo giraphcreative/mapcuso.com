@@ -1,0 +1,37 @@
+
+
+// set colors
+$green: #38914a;
+$grey: #807f84;
+$grey-light: #999999;
+$grey-dark: #444444;
+$blue: #1b3c72;
+$blue-dark: darken( $blue, 17% );
+$purple: #251F57;
+$orange: #ff9e1b;
+$sky: #9aceef;
+
+
+// breakpoints
+$bp-s: 600px;
+$bp-m: 768px;
+$bp-l: 1024px;
+$bp-xl: 1150px;
+$bp-xxl: 1350px;
+$bp-xxxl: 1680px;
+
+
+// import all the things
+@import "mixins", "fonts", "reset", "button", "base", "grid", "form";
+
+
+// import layout components
+@import "header", "showcase", "content", "sidebar", "footer";
+
+
+// import page components
+@import "component/section-title", "component/slides", "component/accordions", "component/title", "component/content", "component/nav-menu", "component/posts", "component/tabs", "component/icon", "component/testimonials", "component/image-boxes", "component/people";
+
+// import lightbox styles
+@import "magnific";
+

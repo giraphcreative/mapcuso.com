@@ -1,0 +1,46 @@
+
+
+.tabs-container {
+    .tab-handles {
+        border-bottom: 1px solid black;
+
+        .handle {
+            @include font-bold;
+            display: inline-block;
+            flex: 1;
+            padding: 15px 25px;
+            border: 1px solid black;
+            border-left: 0;
+            background: white;
+            margin-bottom: -1px;
+            
+            @include respond-to( $bp-m ) {
+                padding: 25px 35px;
+                min-width: 20%;
+                text-align: center;
+            }
+            
+            @include respond-to( $bp-xl ) {
+                padding: 30px 40px;
+                min-width: 15%;
+                text-align: center;
+            }
+
+            &.active {
+                background: $grey-light;
+                border-bottom: 1px solid $grey-light;
+            }
+        }
+    }
+
+    .tab-contents {
+        .content {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+

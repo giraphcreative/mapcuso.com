@@ -1,0 +1,86 @@
+
+$accordion-arrow-size: 20px;
+
+.accordions {
+    padding: 15px 0;
+	
+	.accordion {
+		margin-bottom: 10px;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid rgba( black, .5 );
+
+		.accordion-handle {
+			@include font-bold;
+			position: relative;
+			background-color: $grey;
+			color: white;
+			padding: 15px 10px 15px 20px;
+			cursor: pointer;
+			font-size: 1.1em;
+
+			&:hover {
+				color: white;
+				cursor: pointer;
+			}
+
+			&:after {
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				margin-top: -( $accordion-arrow-size / 2 );
+				width: $accordion-arrow-size;
+				height: $accordion-arrow-size;
+				@include font-bold;
+				content: "\279C";
+                transform: rotate( 90deg );
+				font-size: $accordion-arrow-size;
+				line-height: 1em;
+				pointer-events: none;
+				text-align: center;
+				vertical-align: middle;
+				color: white;
+                transition: transform 300ms ease-in-out;
+			}
+		}
+
+        .accordion-content {
+            display: none;
+        }
+
+		&.blue .accordion-handle {
+			background-color: $blue;
+		}
+
+		&.orange .accordion-handle {
+			background-color: $orange;
+		}
+
+		&.purple .accordion-handle {
+			background-color: $purple;
+		}
+
+		&.sky .accordion-handle {
+			background-color: $sky;
+			color: $blue;
+		}
+
+		&.open {
+			.accordion-handle {
+				&:after {
+					transform: rotate( 270deg );
+				}
+			}
+
+			.accordion-content {
+				display: block;
+				padding: 10px 20px;
+
+				@include respond-to( 480px ) {
+					padding: 10px 20px 20px 20px;
+				}
+			}
+		}
+	}
+}
+

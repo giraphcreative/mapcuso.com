@@ -1,0 +1,134 @@
+
+
+footer {
+	@include padding-tall;
+	background: $purple;
+	color: white;
+	line-height: 1.5em;
+	text-align: center;
+
+	a {
+		color: white;
+	}
+
+	.contact-box {
+		background: $sky;
+		color: $blue;
+		padding: 2% 5%;
+		border-radius: 30px;
+		margin-bottom: 30px;
+		text-align: left;
+		max-width: 960px;
+		margin: 0 auto;
+
+		a {
+			color: $blue;
+		}
+
+		@include respond-to( $bp-s ) {
+			padding: 5%;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.slogan {
+		padding: 10px 0;
+
+		@include respond-to( $bp-s ) {
+			flex: 1 1 60%;
+		}
+
+		h2 {
+			font-size: 1.9em;
+			line-height: 1.3em;
+		}
+	}
+
+	.links {
+		padding: 10px 0;
+
+		@include respond-to( $bp-s ) {
+			padding-left: 5%;
+			flex: 1 1 35%;
+		}
+
+		a {
+			display: block;
+			font-size: 1.4em;
+			line-height: 1.4em;
+			transition: opacity 400ms ease-in-out;
+			font-weight: bold;
+			
+			@include respond-to( $bp-s ) {
+				padding: 5px 30px;
+			}
+
+			i {
+				margin-right: 5px;
+			}
+
+			&:hover {
+				text-decoration: none;
+				opacity: .8;
+			}
+		}
+	}
+
+	.copyright {
+		color: rgba( white, .5 );
+	}
+
+	.footer-connect {
+		padding: 30px 0;
+
+		.logo {
+			max-width: 300px;
+		}
+
+		.btn {
+			margin-top: 15px;
+		}
+
+		.social {
+			padding: 20px 0;
+
+			a {
+				opacity: .7;
+				transition: opacity 400ms ease-in-out;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			img {
+				max-width: 44px;
+				margin: 0 5px;
+			}
+		}
+
+		.secondary-contact {
+			.item {
+				i {
+					color: $orange;
+				}
+			}
+
+			span, a {
+				padding: 5px 12px;
+				display: inline-block;
+			}
+
+			a {
+				transition: all 400ms ease-in-out;
+
+				&:hover {
+					color: orange;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,121 @@
+
+.slides {
+    transition: all 500ms ease-in-out;
+    position: relative;
+    aspect-ratio: 192 / 75;
+    
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 500ms ease-in-out;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        z-index: 0;
+
+        &.has-link {
+            cursor: pointer;
+        }
+
+        .slide-background {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: center center / cover no-repeat;
+        }
+        
+        &.visible {
+            z-index: 1;
+            opacity: 1;
+        }
+
+        img {
+            position: relative;
+            visibility: hidden;
+            z-index: 0;
+            display: block;
+        }
+
+        .slide-content {
+            position: absolute;
+            z-index: 100;
+            bottom: 0;
+            right: 20%;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 40px 40px 40px 50px;
+        
+            @include respond-to( $bp-s ) {
+                right: 30%;
+                padding: 40px 60px 40px 70px;
+            }
+        
+            @include respond-to( $bp-m ) {
+                right: 40%;
+                padding: 40px 60px 40px 70px;
+            }
+        
+            @include respond-to( $bp-xl ) {
+                right: 45%;
+                padding: 40px 60px 40px 90px;
+            }
+
+            .slide-content-inner {
+                flex-basis: 100%;
+            }
+
+            .btn {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .slides-nav a {
+		position: absolute;
+		top: 50%;
+		cursor: pointer;
+		text-indent: -300px;
+		overflow: hidden;
+		opacity: .7;
+		color: black;
+        z-index: 2;
+
+        width: 25px;
+    	height: 40px;
+        margin-top: -20px;
+
+        @include respond-to( $bp-l ) {
+            width: 35px;
+            height: 50px;
+            margin-top: -25px;
+        }
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&.previous {
+			background: transparent url(../img/slider-arrow-left.png) right center / contain no-repeat;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+
+            left: 5px;
+            @include respond-to( $bp-l ) { left: 20px; }
+		}
+
+		&.next {
+			background: transparent url(../img/slider-arrow-right.png) left center/ contain no-repeat;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+
+			right: 5px;
+            @include respond-to( $bp-l ) { right: 20px; }
+		}
+	}
+}

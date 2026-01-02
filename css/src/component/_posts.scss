@@ -1,0 +1,136 @@
+
+
+.post-list-title {
+    @include padding;
+    text-transform: uppercase;
+
+    h2 {
+        font-size: 3.2em;
+        text-align: center;
+    }
+}
+
+
+.post-list-container {
+    @include padding;
+    background: url(../img/bg-stripes-grey.jpg) center center no-repeat;
+    background-size: cover;
+
+    &.pad-tall {
+        @include padding-tall;
+    }
+
+    &.pad-sides {
+        @include padding-side( 0, 0 );
+    }
+
+    &.grey {
+        background-color: $grey-light;
+    }
+
+    .post-list {
+        
+    }
+}
+
+
+.articles {
+
+    &.card {
+        @include respond-to( $bp-s ) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -3%;
+        }
+
+        @include respond-to( $bp-s ) {
+            margin-right: -5%;
+        }
+
+        .entry {
+            @include respond-to( $bp-s ) {
+                flex: 0 0 50%;
+                margin: 0 3% 3% 0;
+            }
+
+            @include respond-to( $bp-m ) {
+                flex: 0 0 28.3333%;
+                margin: 0 5% 5% 0;
+            }
+        }
+    }
+
+    &.list {
+        .entry {
+            hr { display: none; }
+
+            @include respond-to( $bp-m ) {
+                display: flex;
+                align-items: center;
+
+                .entry-thumbnail {
+                    flex: 1 1 35%;
+
+                    img {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .entry-inner {
+                    flex: 1 1 65%;
+                    padding-left: 5%;
+
+                    p { display: none; }
+                }
+            }
+        }
+    }
+
+    .entry {
+        @extend .content-style;
+        background: rgba( $sky, .2 );
+        box-shadow: rgba( black, .4 );
+        margin-bottom: 25px;
+
+        .entry-inner {
+            padding: 25px;
+        }
+
+        .thumbnail {
+            position: relative;
+
+            img {
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        h4 {
+            font-size: 1.1em;
+            line-height: 1.4em;
+            font-weight: bold;
+
+            a {
+                
+            }
+        }
+
+        p {
+            font-size: .9em;
+        }
+
+        .post-date {
+            padding: 0;
+            opacity: .7;
+            font-size: .85em;
+        }
+    }
+}
+
+
+.single-post {
+    section.content {
+        border-top: 15px solid rgba( $grey, .2 );
+    }
+}

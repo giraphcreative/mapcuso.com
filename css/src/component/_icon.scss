@@ -1,0 +1,71 @@
+
+
+.icons-container {
+    overflow: hidden;
+    background: url(../img/bg-stripes-grey.jpg) center center no-repeat;
+    background-size: cover;
+
+    @include respond-to( $bp-xxl ) {
+        padding: 20px $margin;
+    }
+
+    .icons {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -3%;
+
+        @include respond-to( $bp-m ) {
+            margin-right: -5%;
+        }
+
+        @include respond-to( $bp-l ) {
+            flex-wrap: nowrap;
+        }
+        
+        a {
+            color: inherit;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .icon {
+            flex: 0 0 46%;
+            margin-right: 3%;
+            text-align: center;
+            padding: 20px;
+
+            @include respond-to( $bp-m ) {
+                flex: 1 1 30.3333%;
+                margin-right: 3%;
+            }
+
+            @include respond-to( $bp-l ) {
+                flex: 1 1 20%;
+            }
+
+            img {
+                width: 100%;
+                max-width: 160px;
+            }
+
+            h4 {
+                font-size: 1.2em;
+                line-height: 1.4em;
+                color: $purple;
+                font-weight: bold;
+
+                @include respond-to( $bp-l ) {
+                    font-size: 1.35em;
+                }
+            }
+
+            p {
+                color: $grey-dark;
+                font-size: .9em;
+            }
+        }
+    }
+}
+
