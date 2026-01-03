@@ -1,4 +1,36 @@
 
+@font-face {
+    font-family: 'TT Severs';
+    src: url('fonts/tt-severs-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Severs';
+    src: url('fonts/tt-severs-bold-italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Severs';
+    src: url('fonts/tt-severs-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Severs';
+    src: url('fonts/tt-severs-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i');
 
@@ -33,5 +65,9 @@
 	font-family: "Open Sans", sans-serif;
 	font-weight: 700;
 	font-style: italic;
+}
+
+@mixin font-ttsevers {
+	font-family: "TT Severs";
 }
 

@@ -2,7 +2,7 @@
 
 .icons-container {
     overflow: hidden;
-    background: url(../img/bg-stripes-grey.jpg) center center no-repeat;
+    background: white url(../img/bg-traces.svg) center center no-repeat fixed;
     background-size: cover;
 
     @include respond-to( $bp-xxl ) {
@@ -51,13 +51,15 @@
             }
 
             h4 {
-                font-size: 1.2em;
-                line-height: 1.4em;
-                color: $purple;
+                font-family: "TT Severs";
                 font-weight: bold;
+                font-size: 1.1em;
+                line-height: 1.4em;
+                text-transform: uppercase;
+                color: $purple;
 
                 @include respond-to( $bp-l ) {
-                    font-size: 1.35em;
+                    font-size: 1.2em;
                 }
             }
 

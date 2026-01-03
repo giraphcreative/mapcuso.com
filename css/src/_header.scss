@@ -95,7 +95,9 @@ header {
 				}
 
 				& > a {
-					@include font;
+					font-family: "TT Severs", sans-serif;
+					font-weight: bold;
+					text-transform: uppercase;
 					display: block;
 					padding: 10px 5px;
 					color: black;
@@ -104,23 +106,10 @@ header {
 					height: 100%;
 					transition: 400ms all ease-in-out;
 					text-align: center;
-					font-size: 1em;
+					font-size: 1.1em;
 					white-space: nowrap;
 					background: rgba( $grey-light, .3 );
 					position: relative;
-					font-weight: 500;
-
-					&:after {
-						content: '';
-						width: 14px;
-						height: 14px;
-						background: url(../img/icon-arrow-black.png) center center no-repeat;
-						background-size: contain;
-						position: absolute;
-						right: 9px;
-						top: 50%;
-						margin-top: -8px;
-					}
 
 					&:hover {
 						opacity: .7;
@@ -132,11 +121,9 @@ header {
 						background: none;
 						display: inline-block;
 						text-align: left;
-						padding: 40px 20px;
+						padding: 50px 20px;
 						line-height: 20px;
 						text-align: center;
-						text-transform: inherit;
-						font-size: .9em;
 					}
 
 					@include respond-to( $bp-xl ) {
@@ -198,6 +185,12 @@ header {
 								border-bottom: 1px solid rgba( $grey-light, .3 );
 								font-size: .9em;
 								transition: all 400ms ease-in-out;
+								color: $grey-dark;
+
+								i {
+									transition: all 400ms ease-in-out;
+									color: $purple;
+								}
 
 								@include respond-to( $menu-bp ) {
 
@@ -205,6 +198,10 @@ header {
 										border-bottom: 1px solid $grey-light;
 										background: rgba( $orange, .4 );
 										text-decoration: none;
+
+										i {
+											color: $orange;
+										}
 									}
 								}
 							}
