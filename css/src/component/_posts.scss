@@ -13,8 +13,11 @@
 
 .post-list-container {
     @include padding;
-    background: url(../img/bg-stripes-grey.jpg) center center no-repeat;
-    background-size: cover;
+    background: white;
+
+    &.grey {
+        background: rgba( $grey-light, .2 );
+    }
 
     &.pad-tall {
         @include padding-tall;
@@ -22,10 +25,6 @@
 
     &.pad-sides {
         @include padding-side( 0, 0 );
-    }
-
-    &.grey {
-        background-color: $grey-light;
     }
 
     .post-list {
@@ -88,12 +87,10 @@
 
     .entry {
         @extend .content-style;
-        background: rgba( $sky, .2 );
-        box-shadow: rgba( black, .4 );
         margin-bottom: 25px;
 
         .entry-inner {
-            padding: 25px;
+            padding: 20px 0;
         }
 
         .thumbnail {

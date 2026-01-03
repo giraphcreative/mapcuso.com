@@ -2,12 +2,9 @@
 
 .testimonials {
     @include padding;
-
-    @include respond-to( $bp-s ) {
-        background: url(../img/bg-quote.png) center center no-repeat;
-        background-size: cover;
-        color: white;
-    }
+    background: url(../img/bg-quote.png) center center no-repeat;
+    background-size: cover;
+    color: white;
 
     .quote {
         display: none;
@@ -58,7 +55,7 @@
             }
 
             @include respond-to( $bp-l ) {
-                flex: 1 1 75%;
+                flex: 1 1 65%;
             }
 
             .attribution {
@@ -67,6 +64,19 @@
                     color: white;
                     font-weight: bold;
                 }
+            }
+        }
+
+        .quote-mark {
+            display: none;
+
+            @include respond-to( $bp-l ) {
+                display: block;
+                flex: 1 1 10%;
+                margin-right: 4%;
+                height: 200px;
+                background: url(../img/quote-mark.svg) center center no-repeat;
+                background-size: contain;
             }
         }
     }

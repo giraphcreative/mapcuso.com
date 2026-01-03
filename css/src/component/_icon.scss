@@ -4,6 +4,7 @@
     overflow: hidden;
     background: white url(../img/bg-traces.svg) center center no-repeat fixed;
     background-size: cover;
+    padding: 0 20px;
 
     @include respond-to( $bp-xxl ) {
         padding: 20px $margin;
