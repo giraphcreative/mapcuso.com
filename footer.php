@@ -14,6 +14,7 @@
 	
 	<footer class="footer">
 		<div class="wrap">
+			<!--
 			<div class="contact-box">
 				<div class="column slogan">
 					<?php print apply_filters( 'the_content', get_field( 'footer-slogan', 'option' ) ); ?>
@@ -28,6 +29,7 @@
 					?>
 				</div>
 			</div>
+			-->
 			<div class="footer-connect">
 				<p><img src="<?php bloginfo( 'template_url' ); ?>/img/logo-white.png" class="logo" /></p>
 				<p class="join">Interested in Joining Our Team?<br><a href="/careers" class="btn orange rounded">View Available Positions</a></p>

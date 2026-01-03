@@ -1,7 +1,7 @@
 
 
 footer {
-	@include padding-tall;
+	@include padding;
 	background: $purple;
 	color: white;
 	line-height: 1.5em;
@@ -11,14 +11,16 @@ footer {
 		color: white;
 	}
 
+	/*
 	.contact-box {
+		font-weight: bold;
 		background: $sky;
 		color: $blue;
 		padding: 2% 5%;
 		border-radius: 30px;
 		margin-bottom: 30px;
 		text-align: left;
-		max-width: 960px;
+		max-width: 1024px;
 		margin: 0 auto;
 
 		a {
@@ -31,7 +33,7 @@ footer {
 			align-items: center;
 		}
 	}
-
+	
 	.slogan {
 		padding: 10px 0;
 
@@ -74,13 +76,14 @@ footer {
 			}
 		}
 	}
+	*/
 
 	.copyright {
 		color: rgba( white, .5 );
 	}
 
 	.footer-connect {
-		padding: 30px 0;
+		padding: 0 0 30px 0;
 
 		.logo {
 			max-width: 300px;

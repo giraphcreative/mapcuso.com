@@ -4,8 +4,9 @@
     @include padding;
 
     @include respond-to( $bp-s ) {
-        background: url(../img/bg-circle-purple.png) right center no-repeat;
+        background: url(../img/bg-quote.png) center center no-repeat;
         background-size: cover;
+        color: white;
     }
 
     .quote {
@@ -45,6 +46,8 @@
         }
 
         .quote-content {
+            font-size: 1.2em;
+
             @include respond-to( $bp-s ) {
                 flex: 1 1 55%;
                 margin-right: 5%;
@@ -61,7 +64,7 @@
             .attribution {
                 p {
                     padding: 5px 0;
-                    color: $purple;
+                    color: white;
                     font-weight: bold;
                 }
             }

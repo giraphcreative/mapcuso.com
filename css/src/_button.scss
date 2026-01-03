@@ -7,11 +7,12 @@
 
 // general button styles
 .btn {
-	@include font;
+	font-family: "TT Severs";
+	font-weight: bold;
 	opacity: 1;
 	border: 0;
-	padding: 10px 25px;
-	font-size: 17px;
+	padding: 10px 25px 8px;
+	font-size: 15px;
 	line-height: 20px;
 	transition: opacity 400ms ease-in-out;
 	cursor: pointer;
@@ -22,6 +23,7 @@
 	color: white;
 	-webkit-appearance: none;
 	border-radius: 0;
+	text-transform: uppercase;
 
 	&:hover {
 		text-decoration: none;
@@ -49,7 +51,7 @@
 	}
 
 	&.large {
-		padding: 15px 30px;
+		padding: 15px 30px 12px;
 
 		&.rounded {
 			border-radius: 25px;

@@ -1,5 +1,5 @@
 
-$menu-bp: 1220px;
+$menu-bp: 1024px;
 $head-height: 172px;
 
 header {
@@ -12,15 +12,20 @@ header {
 		border-top: 40px solid $blue;
 
 		.logo {
-			flex: 0 0 20%;
+			flex: 1 1 15%;
+
+			img {
+				min-width: 240px;
+			}
 		} 
 		
 		nav {
 			flex: 1 1 70%;
+			padding-right: 20px;
 		}
 		
 		.contact {
-			flex: 1 1 10%;
+			flex: 1 1 15%;
 			padding-right: 20px;
 
 			a {
@@ -83,15 +88,14 @@ header {
 			z-index: 1000;
 			
 			@include respond-to( $menu-bp ) {
-				display: block;
+				display: flex;
 				@include clearfix;
-				padding-left: 30px;
 			}
 
 			& > li {
 				@include respond-to( $menu-bp ) {
 					box-shadow: none;
-					display: inline-block;
+					flex: 1 1 fit-content;
 				}
 
 				& > a {
@@ -100,7 +104,7 @@ header {
 					text-transform: uppercase;
 					display: block;
 					padding: 10px 5px;
-					color: black;
+					color: $purple;
 					text-decoration: none;
 					width: 100%;
 					height: 100%;
@@ -119,19 +123,11 @@ header {
 
 					@include respond-to( $menu-bp ) {
 						background: none;
-						display: inline-block;
+						display: block;
 						text-align: left;
-						padding: 50px 20px;
+						padding: 50px 0;
 						line-height: 20px;
 						text-align: center;
-					}
-
-					@include respond-to( $bp-xl ) {
-						padding: 40px 20px;
-					}
-
-					@include respond-to( $bp-xxl ) {
-						padding: 40px 30px;
 					}
 				}
 
@@ -158,6 +154,29 @@ header {
 						.submenu-col {
 							flex: 1 1 25%;
 							padding: 0 30px 20px 0;
+						}
+					}
+					
+					&.mega {
+						@include respond-to( $menu-bp ) {
+							background: white;
+							position: absolute;
+							top: 110px;
+							left: 0;
+							right: 0;
+							z-index: 1001;
+							flex-wrap: wrap;
+
+							.submenu-col {
+								flex: 0 0 33.3333%;
+								padding: 0 30px 20px 0;
+							}
+						}
+
+						@include respond-to( $bp-xl ) {
+							.submenu-col {
+								flex: 0 0 25%;
+							}
 						}
 					}
 
@@ -210,8 +229,6 @@ header {
 				}
 
 				// open class on mobile
-
-				// hover on larger screens
 				&.open .submenu {
 					display: block;
 

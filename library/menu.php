@@ -23,7 +23,7 @@ function main_menu() {
             if ( !empty( $menu_item['submenu-modules'] ) ):
 
                 // start the submenu
-                print '<div class="submenu">';
+                print '<div class="submenu' . ( count( $menu_item['submenu-modules'] ) > 4 ? ' mega' : '' ) . '">';
 
                 // loop through the components
                 foreach ( $menu_item['submenu-modules'] as $submenu_module ):
