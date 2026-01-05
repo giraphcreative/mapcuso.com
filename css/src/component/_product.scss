@@ -1,0 +1,25 @@
+
+
+.products-container {
+    @include padding;
+
+    .products {
+        .product {
+            padding-bottom: 20px;
+
+            @include respond-to( $bp-s ) {
+                display: flex;
+
+                .product-logo {
+                    flex: 1 1 28%;
+                    margin-right: 4%;
+                } 
+                
+                .product-description {
+                    flex: 1 1 68%;
+                }
+            }
+        }
+    }
+}
+
