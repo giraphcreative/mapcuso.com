@@ -1,10 +1,11 @@
 <?php
 
+$background = get_sub_field( 'background' );
 
 // check if the nested repeater field has rows of data
 if( have_rows('icons') ):
 
-    print '<div class="icons-container"><div class="icons">';
+    print '<div class="icons-container ' . $background . '"><div class="icons">';
 
     // loop through the rows of data
     while ( have_rows('icons') ) : the_row();

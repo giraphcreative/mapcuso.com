@@ -6,6 +6,11 @@
     background-size: cover;
     padding: 0 20px;
 
+    &.waves {
+        background: url(../img/bg-waves.jpg) center center no-repeat;
+        background-size: cover;
+    }
+
     @include respond-to( $bp-xxl ) {
         padding: 20px $margin;
     }

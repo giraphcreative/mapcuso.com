@@ -2,13 +2,20 @@
 
 .products-container {
     @include padding;
+    background: url(../img/bg-squares.jpg) center center no-repeat;
+    background-size: cover;
 
     .products {
         .product {
             padding-bottom: 20px;
+            border-radius: 20px;
+            background: rgba( $grey-light, 0 );
+            transition: background 500ms ease-in-out;
 
             @include respond-to( $bp-s ) {
                 display: flex;
+                align-items: center;
+                padding: 20px;
 
                 .product-logo {
                     flex: 1 1 28%;
@@ -18,6 +25,15 @@
                 .product-description {
                     flex: 1 1 68%;
                 }
+            }
+
+            @include respond-to( $bp-xl ) {
+                padding: 40px 60px;
+            }
+
+            &.has-link:hover {
+                cursor: pointer;
+                background: rgba( $grey-light, .2 );
             }
         }
     }

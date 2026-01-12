@@ -23,7 +23,6 @@ jQuery(document).ready(function($){
 				// get current and next slide objects
 				var current_quote = get_current_quote();
 				var next_quote = current_quote.next( '.quote' );
-                console.log( next_quote );
 
 				// if next slide doesn't exist, go back to the first
 				if ( !next_quote.length ) {
