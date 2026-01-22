@@ -35,7 +35,9 @@ function main_menu() {
                     if ( $submenu_module['acf_fc_layout'] == 'submenu' ):
 
                         // output the menu column
+                        if ( !empty( $submenu_module['title-link']) ) print '<a href="' . $submenu_module['title-link'] . '" class="title-link">';
                         if ( !empty( $submenu_module['title'] ) ) print '<h5>' . $submenu_module['title'] . '</h5>';
+                        if ( !empty( $submenu_module['title-link']) ) print '</a>';
                         wp_nav_menu( array( 'menu' => $submenu_module['nav-menu'] ) );
     
                     elseif ( $submenu_module['acf_fc_layout'] == 'content-area' ):
