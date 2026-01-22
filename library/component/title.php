@@ -2,20 +2,19 @@
 
 // get the title and theme
 $title = get_sub_field('title');
-$color = get_sub_field('color');
+$style = get_sub_field('style');
 
 // if it's not empty, lets output it
 if ( !empty( $title ) ) {
 	?>
-<div class="title-container <?php print $color ?>">
-	<?php if ( $color == 'iris' ) : ?>
-	<video autoplay muted loop class="title-video">
-		<source src="<?php bloginfo( 'template_url' ); ?>/img/iris-purple.mp4" type="video/mp4">
-	</video>
-	<?php endif; ?>
+<div class="title-container <?php print $style ?>">
+	<?php if ( $style == 'basic' ) : ?>
 	<div class="title">
 		<h1><?php print $title ?></h1>
 	</div>
+	<?php else : ?>
+	<img src="<?php the_sub_field( 'image' ); ?>" alt="<?php print $title ?>" title="<?php print $title ?>" />
+	<?php endif; ?>
 </div>
 	<?php
 }

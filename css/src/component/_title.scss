@@ -1,18 +1,27 @@
 
 
 .title-container {
-    background: white url(../img/iris-purple.mp4) center center no-repeat;
+    background: white url(../img/bg-title-basic.jpg) center center no-repeat;
     @include padding-tall;
     text-align: center;
     position: relative;
     overflow: hidden;
 
 	padding: 20px;
-	@include respond-to( $bp-m ) { padding: 50px 30px; }
-	@include respond-to( $bp-l ) { padding: 90px $margin; }
-	@include respond-to( $bp-xl ) { padding: 100px $margin; }
-	@include respond-to( $bp-xxl ) { padding: 110px $margin; }
-	@include respond-to( $bp-xxxl ) { padding: 120px $margin; }
+	@include respond-to( $bp-m ) { padding: 50px 30px 45px; }
+	@include respond-to( $bp-l ) { padding: 90px $margin 80px; }
+	@include respond-to( $bp-xl ) { padding: 100px $margin 90px; }
+	@include respond-to( $bp-xxl ) { padding: 110px $margin 100px; }
+	@include respond-to( $bp-xxxl ) { padding: 120px $margin 110px; }
+
+    &.image {
+        padding: 0;
+        @include respond-to( $bp-m ) { padding: 0; }
+        @include respond-to( $bp-l ) { padding: 0; }
+        @include respond-to( $bp-xl ) { padding: 0; }
+        @include respond-to( $bp-xxl ) { padding: 0; }
+        @include respond-to( $bp-xxxl ) { padding: 0; }
+    }
 
     .title-video {
         position: absolute;
@@ -28,16 +37,23 @@
     h1 { 
         position: relative;
         z-index: 0;
-        color: $purple;
-        text-shadow: 0 0 10px white;
+        color: white;
+        text-shadow: 0 0 10px rgba( black, .5 );
+        text-transform: uppercase;
         font-weight: bold;
+        font-size: 2em;
+        line-height: 1em;
 
-        span {
-            display: block;
-            font-size: 16px;
-            line-height: 20px;
-            letter-spacing: 1px;
-            opacity: .5;
+        @include respond-to( $bp-m ) {
+            font-size: 3em;
+        }
+
+        @include respond-to( $bp-l ) {
+            font-size: 4em;
+        }
+
+        @include respond-to( $bp-xl ) {
+            font-size: 5em;
         }
     }
     h2, h3 { color: rgba( white, .7 ); }
