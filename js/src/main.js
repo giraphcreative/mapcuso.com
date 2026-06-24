@@ -1,38 +1,42 @@
-
-
 // onload responsive footer and menu stuff
-jQuery(document).ready(function($){
+jQuery(document).ready(function($) {
 
 
-	// remove height and width from images inside
-	var fluid_images = $( '.content img' );
-	fluid_images.removeAttr( 'width' ).removeAttr( 'height' );
+    // remove height and width from images inside
+    var fluid_images = $('.content img');
+    fluid_images.removeAttr('width').removeAttr('height');
 
 
-	// show/hide menus when they click the toggler
-	var header = $( 'header' );
-	var menu_toggle = header.find( '.menu-toggle' );
-	var menu = header.find( 'nav' );
-	menu_toggle.click(function(){
+    // show/hide menus when they click the toggler
+    var header = $('header');
+    var menu = $('header nav');
+    var menu_toggle = menu.find('.menu-toggle');
+    var menu_ul = menu.find('.nav-menu');
+    menu_toggle.click(function() {
 
-		// show/hide the main menu
-		menu.toggle();
+        // if the menu is visible, hide it, 
+        if (menu_ul.is(':visible')) {
+            menu_ul.hide();
+        } else {
+            menu_ul.show();
+        }
 
-	});
-	// when user clicks a link in the menu, open submenu if it exists.
-	menu.find( '>ul>li>a' ).click(function(){
-		var parent_li = $( this ).parent( 'li' );
-		var submenu = $( this ).next( '.submenu' );
-		if ( !submenu.is( ':visible' ) && !parent_li.hasClass('no-submenu') ) {
-			event.preventDefault();
-			parent_li.addClass( 'open' );
-		}
-	});
+        // when user clicks a link in the menu, open submenu if it exists.
+        menu_ul.find('a').click(function() {
+            var parent_li = $(this).parent('li');
+            var submenu = $(this).next('ul');
+            if (!submenu.is(':visible') && parent_li.hasClass('menu-item-has-children')) {
+                event.preventDefault();
+                parent_li.addClass('open');
+                submenu.show();
+            }
+        });
 
-	// couple of quick bindings for magnific popup
-	$( '.lightbox-iframe' ).magnificPopup({ 'type': 'iframe' });
-	$( '.lightbox' ).magnificPopup({ 'type': 'image' });
+    });
+
+    // couple of quick bindings for magnific popup
+    $('.lightbox-iframe').magnificPopup({ 'type': 'iframe' });
+    $('.lightbox').magnificPopup({ 'type': 'image' });
 
 
 });
-

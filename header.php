@@ -16,7 +16,7 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=3" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=4" rel="stylesheet" type="text/css">
 
 </head>
 <body <?php body_class(); ?>>
@@ -30,10 +30,10 @@
 	</div>
 
 	<nav>
-		<?php main_menu(); ?>
+		<i class="fa-solid fa-bars menu-toggle"></i>
+		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
 	</nav>
 	
-	<i class="fa-solid fa-bars menu-toggle"></i>
 	
 	<div class="contact">
 		<a href="/contact" class="btn blue large rounded">Contact Us</a>
