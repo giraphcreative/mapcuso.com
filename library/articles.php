@@ -44,7 +44,7 @@ function articles_shortcode( $atts ) {
             $return .= '<div class="entry ' . $color . '">';
             $return .= '<div class="entry-thumbnail">';
             $return .= '<a href="' . get_the_permalink() . '">';
-            $return .= get_the_post_thumbnail();
+            $return .= get_the_post_thumbnail( null, array( 768, 644 ) );
             $return .= '</a>';
             $return .= '</div>';
             $return .= '<div class="entry-inner">';
