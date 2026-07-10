@@ -8,7 +8,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' ); 
 	
 	// set the default thumbnail size
-	set_post_thumbnail_size( 800, 500, true );
+	set_post_thumbnail_size( 768, 644, true );
 	
 	// set the default thumbnail size
 	add_image_size( 'person', 500, 500 );
