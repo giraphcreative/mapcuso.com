@@ -60,7 +60,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": 3,
             "min": "",
             "max": "",
             "allow_in_bindings": 0,
@@ -271,11 +271,12 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1767472536
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1793903173
 }
