@@ -1,54 +1,50 @@
-
-
 .section-title {
     font-family: "TT Severs";
     font-weight: bold;
     padding: 20px 20px 16px 20px;
     text-align: center;
     text-transform: uppercase;
-
-    @include respond-to( $bp-m ) {
+    background-color: $grey;
+    color: black;
+    @include respond-to( $bp-m) {
         padding: 20px $margin 16px;
     }
-
     h2 {
         font-size: 1.6em;
     }
-
     &.blue {
         background: $blue;
         color: white;
-
         span {
             color: $orange;
         }
     }
-
     &.purple {
         background: $purple;
         color: white;
-
         span {
             color: $orange;
         }
     }
-
     &.orange {
         background: $orange;
         color: $blue;
-
         span {
             color: white;
         }
     }
-
     &.sky {
         background: $sky;
         color: $blue;
-
+        span {
+            color: white;
+        }
+    }
+    &.grey-dark {
+        background: $grey-dark;
+        color: white;
         span {
             color: white;
         }
     }
 }
-
